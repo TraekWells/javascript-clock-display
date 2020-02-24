@@ -9,18 +9,20 @@ const updateTime = function() {
   const currentMinutes = currentTime.getMinutes();
   const currentSeconds = currentTime.getSeconds();
 
-  formatTime(currentSeconds);
-
   hours.textContent = currentHour;
   minutes.textContent = currentMinutes;
-  seconds.textContent = currentSeconds;
-  // console.log(currentHour, currentMinutes, currentSeconds);
+  seconds.textContent = formatTime(currentSeconds);
 };
 
 const formatTime = function(time) {
-  // time.toString(16).split("");
-  console.log(time.toString(8).split(""));
-  return time;
+  const splitTime = time.toString().split("");
+
+  if (splitTime.length === 1) {
+    splitTime.unshift("0");
+  }
+
+  const joinTime = splitTime.join("");
+  return joinTime;
 };
 
-// setInterval(updateTime, 1000);
+setInterval(updateTime, 1000);

@@ -42,7 +42,7 @@ body {
   font-size: 3rem;
   color: $color-gray-light;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   &__day {
     cursor: pointer;
@@ -55,7 +55,7 @@ body {
 .time {
   color: $color-primary;
   font-size: 12rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .options {
