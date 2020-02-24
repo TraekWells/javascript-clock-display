@@ -74,5 +74,5 @@
     toggleClock();
     setInterval(updateTime, 1000);
   };
-  window.addEventListener("load", init);
+  window.onload = init;
 })();

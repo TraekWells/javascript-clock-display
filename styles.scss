@@ -49,7 +49,6 @@ body {
   justify-content: center;
 
   &__day {
-    cursor: pointer;
     &:not(:last-of-type) {
       margin-right: 2.5rem;
     }
