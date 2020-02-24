@@ -29,14 +29,23 @@
     const hours = time.querySelector(".time__hour");
     const minutes = time.querySelector(".time__minutes");
     const seconds = time.querySelector(".time__seconds");
+    const meridiem = time.querySelector(".meridiem");
 
     const currentTime = new Date();
     let currentHour = currentTime.getHours();
 
     if (twelveHour.classList.contains("active")) {
+      meridiem.style.display = "block";
+      if (currentHour <= 12) {
+        meridiem.textContent = "AM";
+      } else {
+        meridiem.textContent = "PM";
+      }
       if (currentHour >= 12) {
         currentHour = currentHour - 12;
       }
+    } else {
+      meridiem.style.display = "";
     }
     const currentMinutes = currentTime.getMinutes();
     const currentSeconds = currentTime.getSeconds();
