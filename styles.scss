@@ -6,6 +6,7 @@ $color-gray-dark: #191919;
 $font-stack: "ZCOOL QingKe HuangYou", -apple-system, BlinkMacSystemFont,
   "Segoe UI", Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
   sans-serif;
+$breakpoint-mobile: 31.25em;
 
 html {
   box-sizing: border-box;
@@ -26,6 +27,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  min-width: 30rem;
 }
 
 .active {
@@ -43,19 +45,32 @@ body {
   color: $color-gray-light;
   text-transform: uppercase;
   margin-bottom: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
 
   &__day {
     cursor: pointer;
     &:not(:last-of-type) {
       margin-right: 2.5rem;
     }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      margin-right: 0;
+      &:not(.active) {
+        display: none;
+      }
+    }
   }
 }
 
 .time {
   color: $color-primary;
-  font-size: 12rem;
+  font-size: 15rem;
   margin-bottom: 3rem;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 9rem;
+  }
 }
 
 .options {
@@ -64,6 +79,8 @@ body {
 
   &__option {
     cursor: pointer;
-    margin-right: 2rem;
+    &:not(:last-of-type) {
+      margin-right: 2.5rem;
+    }
   }
 }
