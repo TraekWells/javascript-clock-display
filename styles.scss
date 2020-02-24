@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap");
+
+$color-primary: #00ff97;
+$color-gray-light: #4b4b4b;
+$color-gray-dark: #191919;
+$font-stack: "ZCOOL QingKe HuangYou", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+  sans-serif;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $color-gray-dark;
+  font-family: $font-stack;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.active {
+  color: $color-primary;
+}
+
+.days,
+.time,
+.options {
+  display: flex;
+}
+
+.days {
+  font-size: 3rem;
+  color: $color-gray-light;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+
+  &__day {
+    cursor: pointer;
+    &:not(:last-of-type) {
+      margin-right: 2.5rem;
+    }
+  }
+}
+
+.time {
+  color: $color-primary;
+  font-size: 12rem;
+  margin-bottom: 2rem;
+}
+
+.options {
+  color: $color-gray-light;
+  font-size: 3rem;
+
+  &__option {
+    cursor: pointer;
+    margin-right: 2rem;
+  }
+}
