@@ -68,12 +68,16 @@ body {
   margin-bottom: 3rem;
 
   @media screen and (max-width: $breakpoint-mobile) {
-    font-size: 9rem;
+    font-size: 7.5rem;
   }
 
   .meridiem {
     display: none;
     margin-left: 3rem;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      margin-left: 1.5rem;
+    }
   }
 }
 
